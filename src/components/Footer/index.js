@@ -48,7 +48,7 @@ display: flex;
 const Footer = () => {
   return <FOOTER>
     <LeftText>
-      © 2021 Built and Design by <a href='#home'>@CodeBucks</a>
+      © 2021 Built and Design by <a href='#home'>@kolja</a>
     </LeftText>
     <RightText>
       Reach out to me via 😉
