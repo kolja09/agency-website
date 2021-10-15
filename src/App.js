@@ -1,21 +1,16 @@
-import React, {lazy, Suspense} from 'react';
+import React from 'react';
 import {GlobalStyle} from "./globalStyles";
+import {BrowserRouter as Router, Route} from "react-router-dom";
+import Home from "./Pages/Home";
 
-const Home = lazy(() => import('./Pages/Home'));
-const Header = lazy(() => import('./components/Header'));
-const Footer = lazy(() => import('./components/Footer'));
-const ScrollToTop = lazy(() => import('./components/ScrollToTop'));
 
 const App = () => {
     return (
         <>
-            <Suspense fallback={null}>
-                <GlobalStyle/>
-                <Header />
-                <Home />
-                <Footer />
-                <ScrollToTop/>
-            </Suspense>
+            <GlobalStyle/>
+            <Router>
+                <Route path='/' exact component={Home}/>
+            </Router>
         </>
     );
 };

@@ -1,10 +1,4 @@
-// This is HeroSection component, Main top section of website
 import styled, {keyframes} from "styled-components";
-import Pink from '../../assets/blobPink.png';
-import White from '../../assets/blob-white.png';
-import Purple from '../../assets/blob-purple.png';
-import Arrow from '../../assets/Arrow Right.svg';
-import Mobile from '../../assets/mobile.svg';
 
 const move = keyframes`
   0% {
@@ -16,8 +10,9 @@ const move = keyframes`
   100% {
     transform: translateY(-5px);
   }
-`
-const Herosection = styled.div`
+`;
+
+export const Herosection = styled.div`
   width: 100vw;
   height: 45vw;
   background-color: var(--black);
@@ -36,7 +31,8 @@ const Herosection = styled.div`
     padding-bottom: 2rem;
   }
 `;
-const Blobs = styled.div`
+
+export const Blobs = styled.div`
   width: 100%;
   position: absolute;
   right: 0;
@@ -44,26 +40,30 @@ const Blobs = styled.div`
     opacity: 0.5;
   }
 `;
-const PinkBlob = styled.div`
+
+export const PinkBlob = styled.div`
   width: calc(15% + 15vw);
   position: absolute;
   right: 0;
   top: calc(5rem + 5vw);
   z-index: 6;
 `;
-const WhiteBlob = styled.div`
+
+export const WhiteBlob = styled.div`
   width: calc(20% + 20vw);
   position: absolute;
   right: calc(3.5rem + 3.5vw);
   top: calc(2rem + 2vw);
   z-index: 5;
 `;
-const PurpleBlob = styled.div`
+
+export const PurpleBlob = styled.div`
   width: calc(10% + 10vw);
   position: absolute;
   right: 0;
 `;
-const MainContent = styled.div`
+
+export const MainContent = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -75,7 +75,8 @@ const MainContent = styled.div`
     align-items: center;
   }
 `;
-const LeftBlock = styled.div`
+
+export const LeftBlock = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -90,7 +91,8 @@ const LeftBlock = styled.div`
     filter: drop-shadow(2px 4px 6px var(--black));
   }
 `;
-const Topic = styled.div`
+
+export const Topic = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -100,7 +102,8 @@ const Topic = styled.div`
   padding: 0.5rem 1rem;
   border-radius: 20px;
 `;
-const Circle = styled.span`
+
+export const Circle = styled.span`
   display: inline-block;
   width: 1rem;
   height: 1rem;
@@ -108,17 +111,20 @@ const Circle = styled.span`
   background-color: var(--purple);
   margin-right: 0.5rem;
 `;
-const Title = styled.h1`
+
+export const Title = styled.h1`
   font-size: calc(2rem + 1vw);
   line-height: 1.2;
   padding: 0.5rem 0;
 `;
-const SubText = styled.h5`
+
+export const SubText = styled.h5`
   font-size: calc(0.5rem + 0.5vw);
   color: var(--nav2);
 
 `;
-const CTA = styled.button`
+
+export const CTA = styled.button`
   padding: 0.5rem 1rem;
   margin-top: 1rem;
   border-radius: 20px;
@@ -143,7 +149,7 @@ const CTA = styled.button`
   }
 `;
 
-const MobileSvg = styled.img`
+export const MobileSvg = styled.img`
   max-width: 100%;
   width: calc(30% + 20vw);
   z-index: 7;
@@ -160,37 +166,3 @@ const MobileSvg = styled.img`
     display: none;
   }
 `;
-
-
-const HeroSection = () => {
-    return <Herosection id='home'>
-        <Blobs>
-            <PinkBlob>
-                <img src={Pink} alt='Pink Blob' width='400' height='400'/>
-            </PinkBlob>
-            <WhiteBlob>
-                <img src={White} alt='Pink White' width='400' height='400'/>
-            </WhiteBlob>
-            <PurpleBlob>
-                <img src={Purple} alt='Pink Purple' width='400' height='400'/>
-            </PurpleBlob>
-        </Blobs>
-        <MainContent>
-            <LeftBlock>
-                <Topic>
-                    <Circle/> <span>We Build Web</span>
-                </Topic>
-                <Title>
-                    Transforming your digital presence
-                </Title>
-                <SubText>we help fast growing companies build award winning websites</SubText>
-                <CTA>
-                    Get in touch &nbsp; <img src={Arrow} alt='CTA' width='400' height='400'/>
-                </CTA>
-            </LeftBlock>
-            <MobileSvg src={Mobile} alt='Mobile Svg' width='400' height='400'/>
-        </MainContent>
-    </Herosection>
-};
-
-export default HeroSection;

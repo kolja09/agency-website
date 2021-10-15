@@ -1,7 +1,6 @@
-// This is TextBlock component, To render text with same format
 import styled from "styled-components";
 
-const LeftBlock = styled.div`
+export const LeftBlock = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -14,7 +13,7 @@ const LeftBlock = styled.div`
     align-items: center;
   }
 `;
-const Topic = styled.div`
+export const Topic = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,7 +26,7 @@ const Topic = styled.div`
     font-size: calc(0.4rem + 0.8vw);
   }
 `;
-const Circle = styled.span`
+export const Circle = styled.span`
   display: inline-block;
   width: 1rem;
   height: 1rem;
@@ -35,7 +34,7 @@ const Circle = styled.span`
   background-color: var(--purple);
   margin-right: 0.5rem;
 `;
-const Title = styled.h1`
+export const Title = styled.h1`
   font-size: calc(2rem + 1vw);
   line-height: 1.2;
   padding: 0.5rem 0;
@@ -43,25 +42,10 @@ const Title = styled.h1`
     font-size: calc(1rem + 1.5vw);
   }
 `;
-const SubText = styled.h5`
+export const SubText = styled.h5`
   font-size: calc(0.5rem + 0.5vw);
   color: var(--nav2);
   @media only Screen and (max-width:48rem){
     font-size: calc(0.5rem + 1vw);
   }
 `;
-
-const TextBlock = ({topic, title, subText, children}) => {
-    return <LeftBlock>
-        <Topic>
-            <Circle/> <span>{topic}</span>
-        </Topic>
-        <Title>
-            {title}
-        </Title>
-        <SubText>{subText}</SubText>
-        {children}
-    </LeftBlock>;
-};
-
-export default TextBlock;
